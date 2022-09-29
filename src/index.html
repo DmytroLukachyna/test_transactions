@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dmytro Lukachyna" />
+    <title>Import transactions</title>
+    <meta name="title" content="Import transactions | Dmytro Lukachyna" />
+    <meta name="description" content="Import transactions" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__title">Upload transactions</h1>
+      <div class="header__close">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z"
+            fill="#141419"
+          />
+        </svg>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__wrapper">
+        <h2 class="main__title">Map columns. For each field, select bank account fields</h2>
+        <div class="main__checkbox-wrapper">
+          <input
+            class="main__checkbox"
+            type="checkbox"
+            id="checkbox_first-row"
+            name="checkbox_first-row"
+            value="true"
+          />
+          <label class="main__checkbox-text" for="checkbox_first-row"
+            >First row in file is a header row</label
+          >
+        </div>
+        <span class="divider"></span>
+        <div class="main__items-wrapper">
+          <div class="main__item">
+            <h3
+              class="main__item-title main__item-title_active arrow-attached arrow-attached_active"
+            >
+              Columns
+            </h3>
+            <div class="main__item-file">File <span>report_09.10.20.xls</span></div>
+          </div>
+          <div class="main__item">
+            <h3 class="main__item-title arrow-attached main__item-title_switch">Date</h3>
+            <div class="main__item-input-wrapper">
+              <div class="dropdown-wrapper">
+                <div class="main__item-input main__item-dropdown">
+                  <span>Column 1: Date</span>
+                  <div class="main__item-dropdown-container hidden">
+                    <div class="main__item-dropdown-option">Column 1: Date</div>
+                    <div class="main__item-dropdown-option">Column 2: Date</div>
+                    <div class="main__item-dropdown-option">Column 3: Date</div>
+                    <div class="main__item-dropdown-option">Column 4: Date</div>
+                    <div class="main__item-dropdown-option">Column 5: Date</div>
+                  </div>
+                </div>
+              </div>
+              <div class="main__item-date-wrapper">
+                <input
+                  type="number"
+                  class="main__item-input main__item-date"
+                  placeholder="Month"
+                  min="1"
+                  max="12"
+                />
+                <input
+                  type="number"
+                  class="main__item-input main__item-date"
+                  placeholder="Day"
+                  min="1"
+                  max="31"
+                />
+                <input
+                  type="number"
+                  class="main__item-input main__item-date"
+                  placeholder="Year"
+                  min="1970"
+                  max="2050"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="main__item">
+            <h3 class="main__item-title arrow-attached">Description</h3>
+            <div class="main__item-input-wrapper input-wrapper-fdc">
+              <textarea
+                class="main__item-input main__item-input-textarea"
+                placeholder="Enter description"
+              ></textarea>
+              <div class="main__item-input-add">To map one more column</div>
+            </div>
+          </div>
+          <div class="main__item">
+            <h3 class="main__item-title arrow-attached">Amount</h3>
+            <div class="main__item-input-wrapper">
+              <input
+                type="text"
+                class="main__item-input main__item-amount"
+                placeholder="Enter amount"
+              />
+            </div>
+          </div>
+        </div>
+        <span class="divider"></span>
+        <div class="main__subtitle-wrapper">
+          <h3 class="main__subtitle">File has amounts in:</h3>
+          <div class="main__subtitle-info">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.00001 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8C14.6667 11.6819 11.6819 14.6667 8.00001 14.6667C4.31811 14.6667 1.33334 11.6819 1.33334 8C1.33334 4.3181 4.31811 1.33333 8.00001 1.33333ZM8.00001 2.66666C5.05449 2.66666 2.66668 5.05448 2.66668 7.99999C2.66668 10.9455 5.05449 13.3333 8.00001 13.3333C10.9455 13.3333 13.3333 10.9455 13.3333 7.99999C13.3333 5.05448 10.9455 2.66666 8.00001 2.66666ZM8.00001 6.66666C8.3682 6.66666 8.66668 6.96514 8.66668 7.33333V11.3333C8.66668 11.7015 8.3682 12 8.00001 12C7.63182 12 7.33334 11.7015 7.33334 11.3333V7.33333C7.33334 6.96514 7.63182 6.66666 8.00001 6.66666ZM8.00001 3.99999C8.3682 3.99999 8.66668 4.29847 8.66668 4.66666C8.66668 5.03485 8.3682 5.33333 8.00001 5.33333C7.63182 5.33333 7.33334 5.03485 7.33334 4.66666C7.33334 4.29847 7.63182 3.99999 8.00001 3.99999Z"
+                fill="#898EA3"
+              />
+            </svg>
+            <div class="main__info">Info text</div>
+          </div>
+        </div>
+        <div class="main__radio-wrapper">
+          <input
+            class="main__radio"
+            type="radio"
+            id="one-column"
+            name="columnsQuantity"
+            value="oneColumn"
+          />
+          <label class="main__radio-text" for="one-column"
+            >1 column: both positive and negative numbers</label
+          >
+          <input
+            class="main__radio"
+            type="radio"
+            id="two-columns"
+            name="columnsQuantity"
+            value="twoColumns"
+          />
+          <label class="main__radio-text" for="two-columns"
+            >2 columns: separate positive and negative numbers</label
+          >
+        </div>
+        <div class="main__button-wrapper">
+          <button class="main__button_back">Back</button>
+          <button class="main__button_next">
+            Next
+            <span>
+              <svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.7097 0.387101L7.79289 0.292893C8.15338 -0.0675907 8.72061 -0.0953203 9.1129 0.209705L9.20711 0.292893L12.2071 3.29289L12.2485 3.33685L12.3037 3.40469L12.3753 3.51594L12.4288 3.62866L12.4642 3.73401L12.4931 3.8819L12.5 4L12.4972 4.07524L12.4798 4.20073L12.4503 4.31214L12.4063 4.42322L12.354 4.52071L12.2803 4.62545L12.2071 4.70711L9.20711 7.70711C8.81658 8.09763 8.18342 8.09763 7.79289 7.70711C7.43241 7.34662 7.40468 6.77939 7.7097 6.3871L7.79289 6.29289L9.085 5H1.5C0.947715 5 0.5 4.55228 0.5 4C0.5 3.44772 0.947715 3 1.5 3H9.085L7.79289 1.70711C7.43241 1.34662 7.40468 0.779392 7.7097 0.387101L7.79289 0.292893L7.7097 0.387101Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
